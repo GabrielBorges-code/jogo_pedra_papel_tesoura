@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
     <title>Pedra, Papel e Tesoura</title>
 </head>
 <body>
 
-    <div class="telaDeJogo">
+    <!-- <div class="telaDeJogo">
         <div onclick="pedra()"><img src="/icones/pedra.png"></div>
         <div onclick="papel()"><img src="/icones/papel.png"></div>
         <div onclick="tesoura()"><img src="/icones/tesoura.png"></div>
-    </div>
+    </div> -->
 
-    <Script src="funcao.js"></Script>
+    <p>1 - pedra </p>
+    <p>2 - papel </p> 
+    <p>3 - tesoura</p>
+    
+    <button onclick="EntradaUsuarioPedra()" id="pedra">Pedra</button>
+    <button onclick="EntradaUsuarioPapel()" id="papel">Papel</button>
+    <button onclick="EntradaUsuarioTesoura()" id="tesoura">Tesoura</button>
+
+
+    <Script src="script.js"></Script>
 </body>
 </html>

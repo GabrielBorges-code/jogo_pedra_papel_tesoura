@@ -1,4 +1,4 @@
-let entradaUsuario = prompt("escolha: 1 - pedra | 2 - papel | 3 - tesoura");
+// let entradaUsuario = prompt("escolha: 1 - pedra | 2 - papel | 3 - tesoura");
 let entradaMaquina = Math.ceil(Math.random() * 3);
 
 let usuarioEscolha = "";
@@ -29,9 +29,20 @@ if (entradaUsuario > 3) {
 
 } else {
     vencedor = "Deu Empate";
-    
 }
 
-console.log(entradaUsuario);
-console.log(entradaMaquina);
-console.log(vencedor);
+function pedra(){
+    alert("escolheu pedra")
+}
+
+function papel(){
+    alert("escolheu papel")
+}
+
+function tesoura(){
+    alert("escolheu tesoura")
+}
+
+// alert(entradaUsuario);
+// alert(entradaMaquina);
+// alert(vencedor);

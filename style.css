@@ -1,16 +1,39 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+    }
+
 .opcoes {
     margin-top: 50px;
     text-align: center;
+    
+}
+
+.opcoes img {
+    
+    width: 50px;
 }
 
 .iconUser {
     height: 200px;
+    width: 150px;
 }
 
-.telaUsuario {
+
+.jogadores {
     display: flex;
     justify-content: space-around;
+    
 }
+
+/* .telaMaquina {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+} */
 
 img {
     margin: 20px;
@@ -27,12 +50,19 @@ img:hover {
     text-align: center;
 }
 
-.usuario {
-    width: 100px;
+.usuario img {
+    width: 90px;
+
 }
 
-.maquina {
-    width: 100px;
+.maquina img{
+    width: 90px;
+}
+
+.maq, .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 

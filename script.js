@@ -1,6 +1,12 @@
 let entradaUsuarioPedra = document.querySelector("#pedra").innerHTML;
 let entradaUsuarioPapel = document.querySelector("#papel").innerHTML;
 let entradaUsuarioTesoura = document.querySelector("#tesoura").innerHTML;
+let campoResultado = document.querySelector(".resultado");
+let campoUsuario = document.querySelector(".usuario");
+let campoMaquina = document.querySelector(".maquina");
+
+console.log(campoMaquina);
+console.log(campoUsuario);
 
 let entradaUsuario = 0;
 let entradaMaquina = 0;
@@ -8,6 +14,7 @@ let entradaMaquina = 0;
 let saidaMaquina = "";
 let saidaUsuario = "";
 let vencedor = "";
+
 
 function EntradaUsuarioPedra () {
     entradaMaquina = Math.ceil(Math.random() * 3)
@@ -61,7 +68,8 @@ function Jogar () {
         vencedor = "Deu Empate";
     }
 
-    alert(vencedor);
+    campoResultado.innerHTML = vencedor;
+    // alert(vencedor);
     
 }
 
@@ -69,31 +77,42 @@ function SaidaResultados (num1, num2) {
     saidaUsuario = num1;
     saidaMaquina = num2;
 
+
+
     if (entradaMaquina == 1) {
-        saidaMaquina = "Pedra";
+        saidaMaquina = "<img src='/assets/pedra.png'>";
 
     } else if (entradaMaquina == 2) {
-        saidaMaquina = "Papel";
+        saidaMaquina = "<img src='/assets/papel.png'>";
 
     } else if (entradaMaquina == 3) {
-        saidaMaquina = "Tesoura";
+        saidaMaquina = "<img src='/assets/tesoura.png'>";
 
     }
     // separação 
     if (entradaUsuario == 1) {
-        saidaUsuario = "Pedra";
+        saidaUsuario = "<img src='/assets/pedra.png'>";
 
     } else if (entradaUsuario == 2) {
-        saidaUsuario = "Papel";
+        saidaUsuario = "<img src='/assets/papel.png'>";
 
     } else if (entradaUsuario == 3) {
-        saidaUsuario = "Tesoura";
+        saidaUsuario = "<img src='/assets/tesoura.png'>";
 
     }
 
-    alert("Entrada usuário " + saidaUsuario);
-    alert("Entrada máquina " + saidaMaquina);
+    campoMaquina.innerHTML = saidaMaquina;
+    campoUsuario.innerHTML = saidaUsuario;
 
+    // alert("Entrada usuário " + saidaUsuario);
+    // alert("Entrada máquina " + saidaMaquina);
+
+}
+
+function resultadoDeCampeao() {
+    if (vencedor === saidaUsuario) {
+
+    }
 }
 
 // alert(entradaUsuario);

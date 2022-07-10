@@ -8,21 +8,24 @@
     <title>Pedra, Papel e Tesoura</title>
 </head>
 <body>
+    <div class="telaUsuario">
+        <img class="iconUser" src="/assets/usuario.png">
+        <div class="usuario"></div>
+        <img class="iconUser" src="/assets/maquina.png">
+        <div class="maquina">
+        </div>
+    </div>
+    <div class="telaResultado">
+        <div class="resultado">
+            ganhader
+        </div>
+    </div>
 
-    <!-- <div class="telaDeJogo">
-        <div onclick="pedra()"><img src="/icones/pedra.png"></div>
-        <div onclick="papel()"><img src="/icones/papel.png"></div>
-        <div onclick="tesoura()"><img src="/icones/tesoura.png"></div>
-    </div> -->
-
-    <p>1 - pedra </p>
-    <p>2 - papel </p> 
-    <p>3 - tesoura</p>
-    
-    <button onclick="EntradaUsuarioPedra()" id="pedra">Pedra</button>
-    <button onclick="EntradaUsuarioPapel()" id="papel">Papel</button>
-    <button onclick="EntradaUsuarioTesoura()" id="tesoura">Tesoura</button>
-
+    <div class="opcoes">
+        <img onclick="EntradaUsuarioPedra()" id="pedra" src="/assets/pedra.png">
+        <img onclick="EntradaUsuarioPapel()" id="papel" src="/assets/papel.png">
+        <img onclick="EntradaUsuarioTesoura()" id="tesoura" src="/assets/tesoura.png">  
+    </div>
 
     <Script src="script.js"></Script>
 </body>

@@ -1,0 +1,46 @@
+.opcoes {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.iconUser {
+    height: 200px;
+}
+
+.telaUsuario {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    margin: 20px;
+    cursor: pointer;
+    animation: go-back 3s infinite;
+}
+
+img:hover {
+    background: red;
+}
+
+.resultado {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.usuario {
+    width: 100px;
+}
+
+.maquina {
+    width: 100px;
+}
+
+/* 
+@keyframes go-back {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */

@@ -4,16 +4,27 @@ let entradaUsuarioTesoura = document.querySelector("#tesoura").innerHTML;
 let campoResultado = document.querySelector(".resultado");
 let campoUsuario = document.querySelector(".usuario");
 let campoMaquina = document.querySelector(".maquina");
+let empate = document.querySelector(".empate");
 
-console.log(campoMaquina);
-console.log(campoUsuario);
+let virotiaUsuario = document.querySelector(".player1");
+let virotiaMaquina = document.querySelector(".player2");
+
 
 let entradaUsuario = 0;
 let entradaMaquina = 0;
 
 let saidaMaquina = "";
 let saidaUsuario = "";
-let vencedor = "";
+
+let scoreUsuario = 0;
+let scoreMaquina = 0;
+let scoreEmpate = 0;
+
+
+let number1 = "Usuario Venceu";
+let number2 = "Maquina Venceu";
+
+let vencedor = 0;
 
 
 function EntradaUsuarioPedra () {
@@ -47,29 +58,43 @@ function Jogar () {
         vencedor = "Valor Invalido";
     
     } else if (entradaUsuario == 1 && entradaMaquina == 3) {
-        vencedor = "Usuario Venceu";
-    
+        vencedor = number1;
+        
     } else if (entradaUsuario == 2 && entradaMaquina == 1) {
-        vencedor = "Usuario Venceu";
+        vencedor = number1;
     
     } else if (entradaUsuario == 3 && entradaMaquina == 2) {
-        vencedor = "Usuario Venceu";
+        vencedor = number1;
     
     } else if (entradaUsuario == 1 && entradaMaquina == 2) {
-        vencedor = "Maquina Venceu";
+        vencedor = number2;
     
     } else if (entradaUsuario == 2 && entradaMaquina == 3) {
-        vencedor = "Maquina Venceu";
+        vencedor = number2;
     
     } else if (entradaUsuario == 3 && entradaMaquina == 1) {
-        vencedor = "Maquina Venceu";
-    
+        vencedor = number2;
+        
     } else {
         vencedor = "Deu Empate";
     }
 
+    if (vencedor === number1) {
+        scoreUsuario++;
+    } else if (vencedor === number2){
+        scoreMaquina++;
+    } else if (vencedor != number1 && vencedor != number2) 
+        scoreEmpate++;
+
     campoResultado.innerHTML = vencedor;
-    // alert(vencedor);
+    virotiaUsuario.innerHTML = scoreUsuario;
+    virotiaMaquina.innerHTML = scoreMaquina;
+    empate.innerHTML = scoreEmpate;
+
+    console.log(vencedor);
+    console.log(scoreUsuario);
+    console.log(scoreMaquina);
+    console.log(scoreEmpate);
     
 }
 
@@ -104,17 +129,5 @@ function SaidaResultados (num1, num2) {
     campoMaquina.innerHTML = saidaMaquina;
     campoUsuario.innerHTML = saidaUsuario;
 
-    // alert("Entrada usuário " + saidaUsuario);
-    // alert("Entrada máquina " + saidaMaquina);
-
 }
 
-function resultadoDeCampeao() {
-    if (vencedor === saidaUsuario) {
-
-    }
-}
-
-// alert(entradaUsuario);
-// alert(entradaMaquina);
-// alert(vencedor);

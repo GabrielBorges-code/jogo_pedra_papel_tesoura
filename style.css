@@ -74,3 +74,34 @@ img:hover {
         transform: translateX(0);
     }
 } */
+
+.placar {
+    margin-top: -200px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.player1 {
+    width: 10%;
+    display: inline-block;
+    background-color: blue;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.player2 {
+    width: 10%;
+    display: inline-block;
+    background-color: red;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

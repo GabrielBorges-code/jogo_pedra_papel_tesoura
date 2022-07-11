@@ -9,6 +9,9 @@ let empate = document.querySelector(".empate");
 let virotiaUsuario = document.querySelector(".player1");
 let virotiaMaquina = document.querySelector(".player2");
 
+let ganhou = document.querySelector(".ganhou");
+let perdeu = document.querySelector(".perdeu");
+let empatou = document.querySelector(".empatou");
 
 let entradaUsuario = 0;
 let entradaMaquina = 0;
@@ -23,9 +26,38 @@ let scoreEmpate = 0;
 
 let number1 = "Usuario Venceu";
 let number2 = "Maquina Venceu";
+let number0 = "empate";
 
 let vencedor = 0;
 
+function showGanhou() {
+    ganhou.style.display="block";
+    campoResultado.style.display="block";
+    delay();
+}
+
+function showPerdeu() {
+    perdeu.style.display="block";
+    campoResultado.style.display="block";
+    delay();
+}
+
+function showEmpatou() {
+    empatou.style.display="block";
+    campoResultado.style.display="block";
+    delay();
+}
+
+function ganhouDisappear(){
+    campoResultado.style.display="none";
+    ganhou.style.display="none";
+    perdeu.style.display="none";
+    empatou.style.display="none";
+  }
+
+function delay(){
+  setTimeout(function(){ganhouDisappear()},950);
+}
 
 function EntradaUsuarioPedra () {
     entradaMaquina = Math.ceil(Math.random() * 3)
@@ -59,24 +91,25 @@ function Jogar () {
     
     } else if (entradaUsuario == 1 && entradaMaquina == 3) {
         vencedor = number1;
-        
+        showGanhou();
     } else if (entradaUsuario == 2 && entradaMaquina == 1) {
         vencedor = number1;
-    
+        showGanhou();
     } else if (entradaUsuario == 3 && entradaMaquina == 2) {
         vencedor = number1;
-    
+        showGanhou();
     } else if (entradaUsuario == 1 && entradaMaquina == 2) {
         vencedor = number2;
-    
+        showPerdeu();
     } else if (entradaUsuario == 2 && entradaMaquina == 3) {
         vencedor = number2;
-    
+        showPerdeu();
     } else if (entradaUsuario == 3 && entradaMaquina == 1) {
         vencedor = number2;
-        
+        showPerdeu();
     } else {
-        vencedor = "Deu Empate";
+        vencedor = number0;
+        showEmpatou();
     }
 
     if (vencedor === number1) {
@@ -86,7 +119,7 @@ function Jogar () {
     } else if (vencedor != number1 && vencedor != number2) 
         scoreEmpate++;
 
-    campoResultado.innerHTML = vencedor;
+    // campoResultado.innerHTML = vencedor;
     virotiaUsuario.innerHTML = scoreUsuario;
     virotiaMaquina.innerHTML = scoreMaquina;
     empate.innerHTML = scoreEmpate;

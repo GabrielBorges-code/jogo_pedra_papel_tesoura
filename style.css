@@ -105,3 +105,7 @@ img:hover {
     align-items: center;
     justify-content: center;
 }
+
+.ganhou, .perdeu, .empatou, .resultado {
+    display:none;
+}

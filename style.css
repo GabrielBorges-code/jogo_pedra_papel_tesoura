@@ -6,6 +6,10 @@
     border:0
     }
 
+body {
+    margin-top: 250px;
+}    
+
 .opcoes {
     margin-top: 50px;
     text-align: center;
@@ -46,18 +50,17 @@ img:hover {
 }
 
 .resultado {
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
+    position: static;
 }
 
-.usuario img {
+.usuario img, .maquina img {
     width: 90px;
-
+    position: fixed;
 }
 
-.maquina img{
-    width: 90px;
-}
+
 
 .maq, .user {
     display: flex;
@@ -76,8 +79,8 @@ img:hover {
 } */
 
 .placar {
-    margin-top: -200px;
-    display: flex;
+    margin-top: -250px;
+    display: contents;
     text-align: center;
     align-items: center;
     font-size: 80px;
@@ -89,6 +92,8 @@ img:hover {
     background-color: blue;
     font-size: 40px;
     text-align: center;
+    margin-right: 20px;
+    
 
 }
 
@@ -96,16 +101,25 @@ img:hover {
     width: 10%;
     display: inline-block;
     background-color: red;
-    font-size: 3vw;
+    font-size: 40px;
     text-align: center;
+    margin-left: 20px;
+}
+
+.empate {
+    margin-left: 20px;
+    width: 5%;
+    font-size: 40px;
+    background-color: orange;
 }
 
 .flex-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
-.ganhou, .perdeu, .empatou, .resultado {
+.ganhou, .perdeu, .empatou, .resultado{
     display:none;
 }

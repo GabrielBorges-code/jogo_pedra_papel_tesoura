@@ -30,6 +30,11 @@ let number0 = "empate";
 
 let vencedor = 0;
 
+// function reset() {
+
+// }
+
+
 function showGanhou() {
     ganhou.style.display="block";
     campoResultado.style.display="block";
@@ -48,7 +53,7 @@ function showEmpatou() {
     delay();
 }
 
-function ganhouDisappear(){
+function resultadoDisappear(){
     campoResultado.style.display="none";
     ganhou.style.display="none";
     perdeu.style.display="none";
@@ -56,7 +61,7 @@ function ganhouDisappear(){
   }
 
 function delay(){
-  setTimeout(function(){ganhouDisappear()},950);
+  setTimeout(function(){resultadoDisappear()},2000);
 }
 
 function EntradaUsuarioPedra () {

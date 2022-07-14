@@ -29,6 +29,10 @@ img.iconeJogadores {
 
 }
 
+body {
+    margin-top: 250px;
+}    
+
 .opcoes {
     margin-top: 50px;
     text-align: center;
@@ -76,7 +80,7 @@ img {
 }
 
 .resultado {
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
 
 }
@@ -87,14 +91,12 @@ img {
 
 }
 
-.usuario img {
+.usuario img, .maquina img {
     width: 90px;
-
+    position: fixed;
 }
 
-.maquina img{
-    width: 90px;
-}
+
 
 .maq, .user {
     display: flex;

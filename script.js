@@ -44,21 +44,18 @@ function showGanhou() {
     ganhou.style.display="block";
     campoResultado.style.display="block";
     delay();
-
 }
 
 function showPerdeu() {
     perdeu.style.display="block";
     campoResultado.style.display="block";
     delay();
-
 }
 
 function showEmpatou() {
     empatou.style.display="block";
     campoResultado.style.display="block";
     delay();
-
 }
 
 function resultadoDisappear(){

@@ -1,10 +1,33 @@
-* {
-    padding:0;
-    margin:0;
-    vertical-align:baseline;
-    list-style:none;
-    border:0
-    }
+body {
+    /* background: #131443; */
+    background: #131443;
+    font-family: Arial;
+	font-size: 20px;
+    color: white;
+}
+
+header {
+    /* display: inline-flex; */
+    text-align: center;
+}
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+img.pedraPapelTesoura {
+    height: 140px;
+    width: 105px;
+
+}
+img.iconeJogadores {
+    height: 165px;
+    width: 130px;
+    border: #4dec0e 7px solid;
+    padding: 4px;
+
+}
 
 .opcoes {
     margin-top: 50px;
@@ -13,13 +36,29 @@
 }
 
 .opcoes img {
-    
-    width: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+
 }
 
-.iconUser {
-    height: 200px;
-    width: 150px;
+.imgOpcoes {
+    width: 90px;
+}
+
+.opcoes img:hover {
+    -webkit-transform: translateY(-8px);
+
+}
+
+#pedra #papel #tesoura {
+    height: 140px;
+    width: 105px;
+
+}
+
+.iconeJogadores {
+    height: 140px;
+    width: 105px;
 }
 
 
@@ -29,25 +68,23 @@
     
 }
 
-/* .telaMaquina {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-} */
-
 img {
     margin: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
     animation: go-back 3s infinite;
-}
 
-img:hover {
-    background: red;
 }
 
 .resultado {
     margin-top: 50px;
     text-align: center;
+
+}
+
+.usuario {
+    width: 130px;
+    height: 127px;
+
 }
 
 .usuario img {
@@ -63,14 +100,59 @@ img:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-/* 
-@keyframes go-back {
-    0% {
-        transform: translateX(100px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-} */
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.placar {
+    margin-top: -250px;
+    display: contents;
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.player1 {
+    width: 10%;
+    display: inline-block;
+    background-color: blue;
+    font-size: 40px;
+    text-align: center;
+    margin-right: 20px;
+    
+
+}
+
+.player2 {
+    width: 10%;
+    display: inline-block;
+    background-color: red;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.empate {
+    margin-left: 20px;
+    width: 5%;
+    font-size: 40px;
+    background-color: orange;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ganhou, .perdeu, .empatou, .resultado{
+    display: none;
+}
